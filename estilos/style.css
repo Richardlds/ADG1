@@ -1,3 +1,7 @@
+
+
+
+
 *{
     margin: 0px;
     padding: 0px;
@@ -19,17 +23,19 @@ header{
     background-color: var(--color4);
 }
 
-header img{
-
-    padding-left: 5%;
-}
+a img{
+    width: 90px;
+    position:relative;
+    left: 10%;
+     
+    }
 
 nav{
     display: flex;
     text-align: center;
     justify-content: center;
     align-items:flex-end;
-    padding-left: 20%;
+    padding-left: 15%;
  
 }
 
