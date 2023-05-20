@@ -3,9 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <title>ADG</title>
 </head>
-<body>
-    
+<body>     
+  
+    <header>
+        <div id="menu-b" class="menu-toggle">
+            <span class="material-symbols-outlined">menu</span>
+        </div> 
+
+        <nav class="menu">
+            <div class="menu-toggle"></div>
+            <ul>
+                <li><a href="#">Quem somos</a></li>
+                <li><a href="#">O que fazemos</a></li>
+                <li><a href="#">Inovação</a></li>
+                <li><a href="#">Gente</a></li>
+                <li><a href="#">Responsabilidade social</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div id="logo">
+            <img src="img/png-real.png" alt="/png">
+        </div>
+
+        <div id="fale"><a href="xvideos.com">FALE CONOSCO</a></div>
+
+       
+          
+       
+    </header>
+
+    <main>
+        <section>
+            <!-- Coloque o conteúdo do slide aqui -->
+        </section>
+
+        <section>
+            <h2>FC em Número</h2>
+
+            <img src="#" alt="#">
+            <p><strong>555.00</strong></p>
+            <p>Processos Ativos</p>
+
+            <img src="#" alt="#">
+            <p><strong>250</strong></p>
+            <p>Audiências diárias</p>
+
+            <img src="#" alt="#">
+            <p><strong>23.00</strong></p>
+            <p>Diligências Mensais</p>
+        </section>
+
+        <section>
+            <h2>Nossos serviços</h2>
+
+            <h3>Advocacia Empresarial</h3>
+            <p>O FC é especializado em soluções jurídicas de contencioso de altos volumes. Por meio de sistemas próprios de inteligência processual, que asseguram um controle preciso de fluxos, processos e dados, garante a seus clientes resultados significativos com qualidade e segurança jurídica. É destaque no mercado pelo constante aprimoramento de suas práticas e uma eficiente gestão na advocacia.</p>
+            <a href="#">Saiba mais</a>
+
+            <h3>Audiência e Diligência</h3>
+            <p>O trabalho de correspondência jurídica do FC é automatizado e conta com a participação de advogados na atuação em todo o país, com qualidade e assertividade nas entregas aos clientes. Todas as audiências e diligências são gerenciadas e monitoradas pela solução tecnológica Aud&Check, que além do uso em browser, possui versão de aplicativo, disponível para os sistemas Android e iOS.</p>
+            <a href="#">Saiba mais</a>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Coloque o conteúdo do footer aqui -->
+    </footer>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+     const menu = document.querySelector('.menu');
+     const menuItems = menu.querySelectorAll('a');
+     
+     menuToggle.addEventListener('click', function() {
+       menu.classList.toggle('active');
+     });
+     
+     menuItems.forEach(function(item) {
+       item.addEventListener('click', function() {
+         menu.classList.remove('active');
+       });
+     });
+     
+     document.addEventListener('click', function(event) {
+       const targetElement = event.target;
+       if (!targetElement.closest('.menu') && !targetElement.closest('.menu-toggle')) {
+         menu.classList.remove('active');
+       }
+     });
+     
+     </script>
 </body>
 </html>
