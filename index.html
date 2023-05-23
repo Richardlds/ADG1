@@ -10,7 +10,7 @@
 <body>     
   
     <header>
-        <div id="menu-b" class="menu-toggle">
+        <div class="menu-toggle">
             <span class="material-symbols-outlined">menu</span>
         </div> 
 
@@ -29,17 +29,14 @@
         <div id="logo">
             <img src="img/png-real.png" alt="/png">
         </div>
-
-        <div id="fale"><a href="xvideos.com">FALE CONOSCO</a></div>
-
-       
-          
-       
     </header>
 
     <main>
         <section>
-            <!-- Coloque o conteúdo do slide aqui -->
+            <div class="banner">
+                <video src="video/video1.mp4" muted autoplay class="active"></video>
+                
+            </div>
         </section>
 
         <section>
@@ -76,26 +73,27 @@
     </footer>
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
-     const menu = document.querySelector('.menu');
-     const menuItems = menu.querySelectorAll('a');
-     
-     menuToggle.addEventListener('click', function() {
-       menu.classList.toggle('active');
-     });
-     
-     menuItems.forEach(function(item) {
-       item.addEventListener('click', function() {
-         menu.classList.remove('active');
-       });
-     });
-     
-     document.addEventListener('click', function(event) {
-       const targetElement = event.target;
-       if (!targetElement.closest('.menu') && !targetElement.closest('.menu-toggle')) {
-         menu.classList.remove('active');
-       }
-     });
-     
+        const menu = document.querySelector('.menu');
+        const menuItems = menu.querySelectorAll('a');
+        
+        menuToggle.addEventListener('click', function() {
+          menu.classList.toggle('active');
+        });
+        
+        menuItems.forEach(function(item) {
+          item.addEventListener('click', function() {
+            menu.classList.remove('active');
+          });
+        });
+        
+        document.addEventListener('click', function(event) {
+          const targetElement = event.target;
+          if (!targetElement.closest('.menu') && !targetElement.closest('.menu-toggle')) {
+            menu.classList.remove('active');
+          }
+        });
+        
+        
      </script>
 </body>
 </html>
